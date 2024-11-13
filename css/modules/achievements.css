@@ -1,0 +1,115 @@
+.achievements {
+    padding: var(--space-2xl) var(--space-md);
+    background: var(--surface);
+}
+
+.achievements-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-2xl);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievement-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.achievement-banner {
+    height: 120px;
+    background: var(--gradient-primary);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-icon {
+    width: 64px;
+    height: 64px;
+    background: white;
+    border-radius: var(--radius-full);
+    padding: var(--space-sm);
+    box-shadow: var(--shadow-lg);
+}
+
+.achievement-content {
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.achievement-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: var(--space-sm);
+}
+
+.achievement-description {
+    color: var(--gray-700);
+    margin-bottom: var(--space-lg);
+}
+
+.progress-bar {
+    height: 8px;
+    background: var(--purple-100);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: var(--space-md);
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray-700);
+    font-size: 0.875rem;
+}
+
+.achievement-reward {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--purple-100);
+}
+
+.reward-label {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    margin-bottom: var(--space-xs);
+}
+
+.reward-value {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .achievements {
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .achievements-grid {
+        gap: var(--space-md);
+    }
+}
